@@ -2,4 +2,10 @@
   <h1>{{ .Title }}</h1>
 
   {{ .Content }}
+
+  <div id="qrcode"></div>
+
+  <script>
+    $('#qrcode').qrcode("{{ .Page.Permalink }}");
+  </script>
 {{ end }}
