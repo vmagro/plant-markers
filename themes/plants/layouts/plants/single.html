@@ -5,12 +5,7 @@
 
   <div id="qrcode"></div>
 
-  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
   <script>
-    new QRCode(document.getElementById("qrcode"), {
-      text:"{{ .Page.Permalink }}",
-      correctLevel : QRCode.CorrectLevel.L,
-      colorDark : "#226e2c",
-    });
+    $('#qrcode').qrcode("{{ .Page.Permalink }}");
   </script>
 {{ end }}
