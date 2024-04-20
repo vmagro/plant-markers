@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://vmagro.github.io/plant-markers/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'plants'
