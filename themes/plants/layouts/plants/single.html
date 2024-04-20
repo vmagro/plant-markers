@@ -1,4 +1,18 @@
 {{ define "main" }}
+  <style>
+    @media screen {
+      #qrcode {
+        display: none;
+      }
+    }
+    @media print {
+      @page {
+        size: auto;   /* auto is the initial value */
+        margin: 0;  /* this affects the margin in the printer settings */
+      }
+    }
+  </style>
+
   <h1>{{ .Title }}</h1>
 
   {{ .Content }}
@@ -8,4 +22,5 @@
   <script>
     $('#qrcode').qrcode("{{ .Page.Permalink }}");
   </script>
+
 {{ end }}
